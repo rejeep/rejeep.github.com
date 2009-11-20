@@ -33,20 +33,13 @@
   <body>
     <div class="container">
       <div class="span-24 last" id="header">
-        <img src="/images/logo.png" alt="" />
+        <a href="/">
+          <img src="/images/logo.png" />
+        </a>
       </div>
 
-      <div class="span-16">
+      <div class="span-24 last">
         {{ content }}
-      </div>
-      
-      <div class="span-8 last posts">
-        <h2>Posts</h2>
-        <ul>
-          {% for post in site.posts %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
       </div>
     </div>
   </body>

@@ -1,7 +1,10 @@
 body {
+  font-family: Palatino, "Book Antiqua", "URW Palladio L", serif;
+  font-size: 14px;
 }
 
 pre {
+  font-family: Inconsolata, Consolas, monospace;
   background-color: #ccc;
   padding: 10px;
   overflow-x: auto;
@@ -17,11 +20,6 @@ a:hover {
 
 strong {
   background-color: #ccc;
-}
-
-.posts ul {
-  list-style-type: none;
-  margin-left: 0px;
 }
 
 #header {
