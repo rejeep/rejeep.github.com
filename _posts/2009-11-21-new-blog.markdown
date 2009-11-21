@@ -13,4 +13,4 @@ The migration also lead to a new url, **tuxicity.se**. But the old url
 **blog.tuxicity.se** will still work.
 
 Unforuneately you will have to update the **RSS feed url** to
-**http://feeds.feedburner.com/Tuxicity**
+**http://feeds.feedburner.com/tuxicity**
