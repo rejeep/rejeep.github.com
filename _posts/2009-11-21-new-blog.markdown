@@ -1,0 +1,16 @@
+---
+title: New Blog
+layout: post
+---
+
+Ever since I started blogging, I have used Wordpress on my own server,
+but I never liked it for several reasons.
+
+I have finally found the time and energy to migrate my blog from Wordpress
+to the Awesome [Jekyll](http://github.com/mojombo/jekyll).
+
+The migration also lead to a new url, **tuxicity.se**. But the old url
+**blog.tuxicity.se** will still work.
+
+Unforuneately you will have to update the **RSS feed url** to
+**http://feeds.feedburner.com/Tuxicity**
