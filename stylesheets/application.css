@@ -29,3 +29,8 @@ strong {
 #related {
   margin-top: 20px;
 }
+
+.no-bullets {
+  margin: 0;
+  list-style-type: none;
+}
