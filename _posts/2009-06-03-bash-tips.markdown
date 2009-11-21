@@ -5,13 +5,13 @@ categories:
  - bash
 ---
 
-Here's a few BASH-tips I find very useful:
+Here's a few BASH-tips I find very useful in the shell:
 
 ### Swapping ###
-One feature I hate my TV not having, is to fast and easy be able to
-switch between two channels. Turns out that BASH does a better job
-than my TV. Before I knew about this little trick I used pushd and
-popd. Painfull in comparison to this:
+One feature I hate that my TV does not have, is to fast and easy be
+able to switch between two channels. Turns out that BASH does a better
+job than my TV. Before I knew about this little trick I used **pushd** and
+**popd**. Painfull in comparison to this:
 
 {% highlight bash %}
 # Start off in $HOME
@@ -43,8 +43,8 @@ mv my_cool_site.conf /etc/apache2/vhost.d
 cd /etc/apache2/vhost.d
 {% endhighlight %}
 
-The question is: How did you get the path as argument to cd? Used the
-mouse? Typed it again? Well... Try typing cd, and the press M-. (Alt
+The question is: How did you get the path as argument to **cd**? Used the
+mouse? Typed it again? Well... Try typing **cd**, and the press **M-**. (Alt
 and dot). Voila!
 
 {% highlight bash %}
@@ -54,19 +54,19 @@ cd M-.
 
 ### ls after cd ###
 I **always**, no matter what, want to list the current folders contents
-when I enter it. So after a while when gotten tired of typing ls all
+when I enter it. So after a while when gotten tired of typing **ls** all
 the time. I wrote a little function to do the job:
 
 {% highlight bash %}
 # Does ls after cd.
 function cd()
 {
-  builtin cd ${1:-$HOME} && ls;
+  builtin cd ${1:-$HOME} && ls
 }
 {% endhighlight %}
 
-Put this in your ~/.bashrc file and then source it (source ~/.bashrc)
-and try it out.
+Put this in your **~/.bashrc** file and then source it with
+**source ~/.bashrc** and try it out.
 
 ### Fast ls ###
 As you might figure out from the previous tip, I like to know what I
@@ -78,16 +78,16 @@ changing a lot in the current folder.
 bind -x '"\C-o"':"ls -lh"
 {% endhighlight %}
 
-Put this in your ~/.bashrc file and then source it (source ~/.bashrc)
-and try it out by pressing C-o (Ctrl and o).
+Put this in your **~/.bashrc** file and then source it with
+**source ~/.bashrc** and try it out by pressing **C-o** (Ctrl and o).
 
 ### Recursive word count ###
 What do you do if you want to know how many lines of code all java
-files are togheter? You use <strong>wc</strong>, right? But what if
-you want to count all files recursively? Then wc cannot do the job on
-it's own. And that's the beauty of piping. Since the command to do the
-job is quite long and I do it quite often, I created a little script
-for it:
+files are togheter? You use **wc**, right? But what if you want to
+count all files recursively? Then **wc** cannot do the job on it's
+own. And that's the beauty of **piping**. Since the command to do the job
+is quite long and I do it quite often, I created a little script for
+it:
 
 {% highlight bash %}
 #!/bin/bash

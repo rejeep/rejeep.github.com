@@ -4,10 +4,10 @@ layout: post
 categories:
  - emacs
 ---
-Two of my most frequently used tools when programming are Emacs and
-Firefox. And much of the time in Firefox I spend on Google. That's why
+Two of my most frequently used tools when programming are **Emacs** and
+**Firefox**. And much of the time in Firefox I spend on **Google**. That's why
 I created this (simple) function that googles a region. Just select
-the region you want to google and then do M-x google-region (or
+the region you want to google and then do **M-x google-region** (or
 preferably bind a key to it).
 
 {% highlight scheme %}

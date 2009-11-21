@@ -9,13 +9,13 @@ categories:
  - tree
 ---
 
-How do you make a tree node in a JTree stretch over the whole row? A
-TreeCellRenderer will not work since then the background will only
+How do you make a tree node in a **JTree** stretch over the whole row? A
+**TreeCellRenderer** will not work since then the background will only
 appear to the right of the node. The answer is to use a
-TreeCellRenderer in combination with a TreeUI. Lets show how with an
+**TreeCellRenderer** in combination with a **TreeUI**. Lets show how with an
 example.
 
-Lets start of with a main class that creates a frame and adds a JTree.
+Lets start of with a main class that creates a frame and adds a **JTree**.
 
 {% highlight java %}
 import javax.swing.JFrame;
@@ -55,7 +55,7 @@ public class Main extends JFrame
 }
 {% endhighlight %}
 
-Next, lets create a class that extend JTree.
+Next, lets create a class that extend **JTree**.
 
 {% highlight java %}
 import java.awt.Color;

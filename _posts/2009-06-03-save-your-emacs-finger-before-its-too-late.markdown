@@ -8,8 +8,8 @@ categories:
 I'm serious! Mine almost died! I am of course talking about the left
 [little finger](http://en.wikipedia.org/wiki/Little_finger). Do
 yourself a favor and save your finger (and be faster, which is the
-meaning of life) by switching Ctrl and Caps Lock. Put this in
-~/.xmodmap:
+meaning of life) by switching **Ctrl** and **Caps Lock**. Put this in
+**~/.xmodmap**:
 
 {% highlight bash %}
 remove Lock = Caps_Lock
@@ -28,5 +28,5 @@ xmodmap ~/.xmodmap
 {% endhighlight %}
 
 I takes a while getting used to. But it cant be worse than learning to
-use C-n, C-p, C-f, C-b, M-f, M-b, etc.. instead of using the arrows,
+use **C-n**, **C-p**, **C-f**, **C-b**, **M-f**, **M-b**, **etc...** instead of using the arrows,
 which you do use, right?

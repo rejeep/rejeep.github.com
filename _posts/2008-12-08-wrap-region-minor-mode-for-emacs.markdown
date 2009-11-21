@@ -15,7 +15,7 @@ wrap-region is a way to wrap contents with punctuations, rather than
 just insert them. It also has the extra feature to wrap contents with
 a markup tag:
 {% highlight html %}
-<tag attribute="...">...</tag>;
+<tag attribute="...">...</tag>
 {% endhighlight %}
 
 Many lines of comments are included in the code, so I don't spend any

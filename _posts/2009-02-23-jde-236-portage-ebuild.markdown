@@ -29,4 +29,4 @@ release. It's available among my ebuilds at
 [Github](http://github.com/rejeep/ebuilds). The ebuild also include a
 patch for removing unused imports.
 
-Note that you need Ant and SVN to use this ebuild!
+Note that you need **Ant** and **SVN** to use this ebuild!

@@ -22,7 +22,7 @@ end
 
 Lets also say that on the posts index page, all posts should be
 listed, and for each post the number of comments. To make this
-efficient lets add counter cache in posts for the number of
+efficient lets add **counter cache** in posts for the number of
 comments. First a **comments_count:integer** column must be added in the
 posts table, and then the comments model has to be updated like this:
 
@@ -57,13 +57,13 @@ happens in the test: A post is created and then fetched from the
 database into memory. Then the same thing happens with a comment. When
 the comment record is saved, it makes sure that the post
 **comments_count** is updated in the database. Thats right, in the
-database. Above I said that a post was read into memory. So the post
+**database**. Above I said that a post was read into **memory**. So the post
 the test is working with, is in memory. But the comment only updates
 the post in the database.
 
 So what needs to be done is to update the post from the database,
 before checking the **comments_count**. Thankfully there’s a nice method
-in ActiveRecord that helps with this, called reload. Lets update the
+in **ActiveRecord** that helps with this, called **reload**. Lets update the
 test to use reload, and then run it again. And what do you know, it
 passes. Here’s the working test:
 

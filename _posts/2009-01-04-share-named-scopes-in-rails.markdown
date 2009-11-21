@@ -59,9 +59,9 @@ This is usually achived by including a module in the models, as it is
 in this case. But since sharing a named scope is very common, I want
 to have them nicely structured.
 
-So in lib, I have a folder named named_scope. And in that folder, all
+So in **lib**, I have a folder named **named_scope**. And in that folder, all
 modules with common named scopes are. To get extra nice structure I
-create a module called NamedScope:
+create a module called **NamedScope**:
 {% highlight ruby %}
 # lib/named_scopes/named_scope.rb
 module NamedScope
@@ -69,7 +69,7 @@ end
 {% endhighlight %}
 
 Now I create the module that will hold the common department
-scope. And that is done by using self.included:
+scope. And that can be done using **self.included**:
 {% highlight ruby %}
 # lib/named_scopes/department.rb
 module NamedScope::Departments

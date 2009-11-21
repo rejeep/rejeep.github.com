@@ -11,7 +11,7 @@ categories:
 ---
 
 Recently, at work, I had a bunch (too many to handle manually) of
-ISO-8859-1 encoded YAML-files, which I had to convert to UTF-8.
+**ISO-8859-1** encoded **YAML-files**, which I had to convert to **UTF-8**.
 
 I knew that **iconv** took care of that, and with a for-loop I went
 through all files and converted them.
@@ -23,7 +23,7 @@ done
 {% endhighlight %}
 
 The file contents was converted correct. But the file names however
-had question marks instead of some special characters (å, ä and ö). I
+had question marks instead of some special characters (**å**, **ä** and **ö**). I
 solved that with this little hack.
 
 {% highlight bash %}

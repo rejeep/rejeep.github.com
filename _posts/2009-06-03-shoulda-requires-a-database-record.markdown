@@ -34,7 +34,7 @@ Can't find first User
 
 I even got it when I changed the **:case_sensitive** option.
 
-Turns out that Shoulda requires there to be a record in the
+Turns out that **Shoulda** requires there to be a record in the
 database. So by just creating a record I got rid of the failures:
 
 {% highlight ruby %}
@@ -42,8 +42,7 @@ Factory(:user)
 {% endhighlight %}
 
 ### Update ###
-In recent versions of Shoulda this is solved by defining a subject
-block:
+In recent versions of Shoulda this is solved by defining a **subject** block:
 
 {% highlight ruby %}
 class UserTest < ActiveSupport::TestCase

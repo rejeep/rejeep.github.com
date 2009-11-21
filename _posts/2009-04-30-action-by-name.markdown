@@ -18,13 +18,13 @@ matters in to my own hands and created a somewhat Rails like
 functionality for controllers.
 
 As all Rails developers know, or at least should know, the controller
-is determined by params[:controller] and the action by
-params[:action]. So what I did was something similar, only that you in
+is determined by **params[:controller]** and the action by
+**params[:action]**. So what I did was something similar, only that you in
 Java can not pass params, as you can in Rails.
 
 ### By name ###
 Basically how it works is that when you create a controller you extend
-ApplicationController, that in turn extend ActionController. Example
+**ApplicationController**, that in turn extend **ActionController**. Example
 with one save method (or action).
 
 {% highlight java %}
@@ -38,7 +38,7 @@ public class SomeController extends ApplicationController
 {% endhighlight %}
 
 Then say we want to call that method when a button is pressed. By
-extending ApplicationController it is as simple as this:
+extending **ApplicationController** it is as simple as this:
 
 {% highlight java %}
 JButton save = new JButton("Save");
@@ -48,28 +48,28 @@ save.setName("save");
 
 Almost like in Rails. You specify controller and action, and then
 Rails does the rest. Now when you click the save button, the method
-save in SomeController will be called automatically. Easy, right? Or,
+save in **SomeController** will be called automatically. Easy, right? Or,
 at least as easy as it can be in Java.
 
 ### Method Missing ###
 After a while I was assigned a task and doing it I discovered some
 limitations. The task was to create a menu, in which you could switch
 between all different languages. Adding a new language to the
-application is as easy as putting a yml-file in a directory (À la
+application is as easy as putting a **YAML-file** in a directory (À la
 Rails). So I created the menu dynamically from all yml-files. I also
-created a controller named LanguageController, that were to receive
+created a controller named **LanguageController**, that should receive
 actions when the language should change.
 
 I discovered that to make this happen, I had to create one method in
 the controller for each locale (sv, en, fi, etc...). And that was
-clearly not an option. So in ActionController I added some new
+clearly not an option. So in **ActionController** I added some new
 functionality. Most of you Ruby and Rails developers know it. I'm
-talking about "method missing".
+talking about **method-missing**.
 
 How it works is simple. If there's no method in the controller, with
-the same name as the component, the method methodMissing in
-ApplicationController is called. So in my case it was as simple as in
-LanguageController override methodMissing and implement the language
+the same name as the component, the method **methodMissing** in
+**ActionController** is called. So in my case it was as simple as in
+**LanguageController** override **methodMissing** and implement the language
 switching.
 
 ### Interesting ###

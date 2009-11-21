@@ -5,15 +5,15 @@ categories:
  - emacs
 ---
 
-All the time when I'm programming I find myself in the situation where
+All the time when I'm programming, I find myself in the situation where
 I'm in the middle of a line and want to open a line above or
 below. Doing this would be accomplished with something like this:
 
-In the above case: C-a, C-m, C-p, &lt;tab&gt;. And in the below case: C-e, C-m, &lt;tab&gt;
+In the above case: **C-a, C-m, C-p, &lt;tab&gt;**. And in the below case: **C-e, C-m, &lt;tab&gt;**
 
 That's a lot of typing for such common tasks. So I created these
-functions that do exactly what I describe. I then bind a key to each
-function, and have my lines opened much faster.
+functions that do exactly what I describe. I also bound a key to each
+function to have my lines opened much faster.
 
 {% highlight scheme %}
 (defun open-line-above ()

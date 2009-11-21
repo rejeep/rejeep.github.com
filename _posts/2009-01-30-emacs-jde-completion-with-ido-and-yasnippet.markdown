@@ -32,7 +32,7 @@ Put the defun in the JDE hook.
       (message "No completions at this point"))))
 {% endhighlight %}
 
-Eval and do C-c C-v . on a variable.
+Eval and do **C-c C-v .** on a variable:
 {% highlight java %}
 public class Test
 {
@@ -49,8 +49,8 @@ That should result in the following in the minibuffer:
 > {substring(int, int) | substring(int) | subSequence(int, int)}
 {% endhighlight %}
 
-Due to lack of good design in jde-complete.el (if you ask me) this
+Due to lack of good design in **jde-complete.el** (if you ask me) this
 defun will not handle all cases of completion. Even though it handles
 the most important once. In order to cover all cases lot of code from
-functions in jde-complete.el had to be copied, which I didn't want to
+functions in **jde-complete.el** had to be copied, which I didn't want to
 do.
