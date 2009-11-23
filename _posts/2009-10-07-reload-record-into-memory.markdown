@@ -4,7 +4,7 @@ layout: post
 categories:
  - rails
  - shoulda
- - testing
+ - test
 ---
 
 Lets say we are creating a simple blog. The blog has posts and each
