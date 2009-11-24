@@ -90,7 +90,8 @@ class ActiveSupport::TestCase
 end
 {% endhighlight %}
 Put this in a file named whatever you find appropriate and put it in
-**test/shoulda_macros**. I call my file **security.rb**.
+**test/shoulda_macros**. I call mine **security.rb**. Then change the
+tests to suit your application.
 
 The code defines three methods, which are all obvious, but I show one
 example of each below.
@@ -103,14 +104,16 @@ class PostsControllerTest < ActionController::TestCase
   should_require_user("on GET to :new") { get :new }
 
   context "on GET to :new" do
-    setup do
-      login_as_user
-
-      get :new
+    context "when logged in" do
+      setup do
+        login_as_user
+       
+        get :new
+      end
+       
+      should_assign_to :post
+      # etc...
     end
-
-    should_assign_to :post
-    # etc...
   end
 
 end
