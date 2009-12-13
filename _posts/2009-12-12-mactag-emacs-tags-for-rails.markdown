@@ -1,21 +1,23 @@
 ---
-title: Mactag - Emacs TAGS for Rails
+title: Mactag - Ctags for Rails
 layout: post
 categories:
  - rails
  - emacs
 ---
 
-If you do your programming in Emacs, you probably know that you can use
-[Emacs Tags](http://www.gnu.org/software/emacs/manual/html_node/emacs/Tags.html)
-to follow tags (of functions, variables, macros, whatever)
-to their definitions. To create a TAGS-file for my Rails projects, I
+
+[Ctags](http://ctags.sourceforge.net/)
+allows you to follow tags (of functions, variables, macros, whatever)
+to their definitions. If you do your Rails development in an editor
+that supports Ctags you might have been manually setting the TAGS-file
+up in your projects. To create a TAGS-file in my Rails projects, I
 always created a rake task.
 
 Finally, I got tired of this and decided to write up a Rails plugin to
 do it. The result is
-[Mactag](https://github.com/rejeep/mactag). Mactag gives you a DSL to
-create a TAGS-file for your Rails projects.
+[Mactag](https://github.com/rejeep/mactag).
+Mactag gives you a DSL to create a TAGS-file for your Rails projects.
 
 An example configuration (**config/mactag.rb**) might look like this:
 
