@@ -13,10 +13,9 @@ version of it.
 
 {% highlight scheme %}
 (defun duplicate-current-line-or-region (arg)
-  "Duplicates current line or region ARG times.
-If there's no region the current line will be duplicated. However, if
-there's a region, that region will first extend over the whole rows in
-the region and then be duplicated."
+  "Duplicates the current line or region ARG times.
+If there's no region, the current line will be duplicated. However, if
+there's a region, all lines that region covers will be duplicated."
   (interactive "p")
   (let (beg end (origin (point)))
     (if (and mark-active (> (point) (mark)))
