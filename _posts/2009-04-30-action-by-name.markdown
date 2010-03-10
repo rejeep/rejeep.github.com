@@ -22,7 +22,7 @@ is determined by **params[:controller]** and the action by
 **params[:action]**. So what I did was something similar, only that you in
 Java can not pass params, as you can in Rails.
 
-### By name ###
+## By name
 Basically how it works is that when you create a controller you extend
 **ApplicationController**, that in turn extend **ActionController**. Example
 with one save method (or action).
@@ -51,7 +51,7 @@ Rails does the rest. Now when you click the save button, the method
 save in **SomeController** will be called automatically. Easy, right? Or,
 at least as easy as it can be in Java.
 
-### Method Missing ###
+## Method Missing
 After a while I was assigned a task and doing it I discovered some
 limitations. The task was to create a menu, in which you could switch
 between all different languages. Adding a new language to the
@@ -72,7 +72,7 @@ the same name as the component, the method **methodMissing** in
 **LanguageController** override **methodMissing** and implement the language
 switching.
 
-### Interesting ###
+## Interesting
 If you want to know more. Read the few lines of code and it's many
 lines of comments. It's at
 [Github](http://github.com/rejeep/action_by_name). There's also a

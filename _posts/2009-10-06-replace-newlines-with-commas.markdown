@@ -11,7 +11,7 @@ categories:
  - tr
 ---
 
-### Background ###
+## Background
 
 **Note!** If you're only interested in the solution, read the **Solution**
 section at the end.
@@ -66,7 +66,7 @@ To:
 
 <pre>2334, 45345, 2342, 23434, ...</pre>
 
-### Solution ###
+## Solution
 
 I tried a little bit of **sed** and **awk**. But it turns out that the winner
 by far was **tr**:

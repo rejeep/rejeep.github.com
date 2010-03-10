@@ -39,7 +39,7 @@ Keats is hosted at Github:
 In the file comments, there's plenty of installation and usage
 instructions. But here's some basic usage.
 
-### Keats ###
+## Keats
 This is a minor mode which allows you to manage keats without having
 to leave the current buffer. These keybindings are available:
 
@@ -66,7 +66,7 @@ remove (see comments in code).
 **Interactive**
 Interactive mode: **C-c k i**. Starts interactive mode (see below).
 
-### Keats Interactive ###
+## Keats Interactive
 Why two modes? Well Keats mode is good if you find out a new
 keybinding when you are working that you fast want to save without it
 disturbing your workflow. Keats Interactive mode is good to use if you
@@ -111,7 +111,7 @@ a keybinding contains **C-g** or **RET**, which otherwise wouldn't be
 possible to add. This is also good if you don't want to enter a key,
 but a function name.
 
-### Future and Feature ###
+## Future and Feature
 In future versions I plan to implement tags support. And one thing I
 haven't yet decided, is if it should be possible to enter the same key
 more than once. For example one might want to store the key **n** which

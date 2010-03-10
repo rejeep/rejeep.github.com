@@ -41,7 +41,7 @@ database. So by just creating a record I got rid of the failures:
 Factory(:user)
 {% endhighlight %}
 
-### Update ###
+## Update
 In recent versions of Shoulda this is solved by defining a **subject** block:
 
 {% highlight ruby %}

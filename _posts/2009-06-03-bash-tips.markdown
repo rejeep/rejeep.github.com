@@ -7,7 +7,7 @@ categories:
 
 Here's a few BASH-tips I find very useful in the shell:
 
-### Swapping ###
+## Swapping
 One feature I hate that my TV does not have, is to fast and easy be
 able to switch between two channels. Turns out that BASH does a better
 job than my TV. Before I knew about this little trick I used **pushd** and
@@ -34,7 +34,7 @@ $ pwd
 /etc/apache2/vhosts.d
 {% endhighlight %}
 
-### Fast path completion ###
+## Fast path completion
 How often do you move a file or folder to a different folder and then
 want to visit the target folder? I guess this is how you do it?
 
@@ -52,7 +52,7 @@ mv my_cool_site.conf /etc/apache2/vhost.d
 cd M-.
 {% endhighlight %}
 
-### ls after cd ###
+## ls after cd
 I **always**, no matter what, want to list the current folders contents
 when I enter it. So after a while when gotten tired of typing **ls** all
 the time. I wrote a little function to do the job:
@@ -68,7 +68,7 @@ function cd()
 Put this in your **~/.bashrc** file and then source it with
 **source ~/.bashrc** and try it out.
 
-### Fast ls ###
+## Fast ls
 As you might figure out from the previous tip, I like to know what I
 have in the current folder, all the time. The above only helps if I
 move around between different folders. So I needed something when
@@ -81,7 +81,7 @@ bind -x '"\C-o"':"ls -lh"
 Put this in your **~/.bashrc** file and then source it with
 **source ~/.bashrc** and try it out by pressing **C-o** (Ctrl and o).
 
-### Recursive word count ###
+## Recursive word count
 What do you do if you want to know how many lines of code all java
 files are togheter? You use **wc**, right? But what if you want to
 count all files recursively? Then **wc** cannot do the job on it's

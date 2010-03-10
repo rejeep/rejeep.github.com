@@ -96,7 +96,7 @@ tests to suit your application.
 The code defines three methods, which are all obvious, but I show one
 example of each below.
 
-### should_require_user ###
+## should_require_user
 Remake of the test above.
 {% highlight ruby %}
 class PostsControllerTest < ActionController::TestCase
@@ -119,7 +119,7 @@ class PostsControllerTest < ActionController::TestCase
 end
 {% endhighlight %}
 
-### should_require_no_user ###
+## should_require_no_user
 User can not be logged in to visit the new action.
 
 {% highlight ruby %}
@@ -137,7 +137,7 @@ class UserSessionsControllerTest < ActionController::TestCase
 end
 {% endhighlight %}
 
-### should_require_admin ###
+## should_require_admin
 User must be an admin to visit the index action.
 
 {% highlight ruby %}
@@ -164,7 +164,7 @@ end
 That is **one** line of code to say that you must be logged in as a
 user, an admin or not logged in at all to visit an action.
 
-### But, is this code really DRY? ###
+## But, is this code really DRY?
 In all the examples, the exact same **get request** is specified at two
 places. Luckely, Ruby lambdas can help refactor this.
 {% highlight ruby %}
