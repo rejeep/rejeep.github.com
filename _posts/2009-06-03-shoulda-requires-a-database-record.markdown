@@ -3,9 +3,8 @@ title: Shoulda requires a database record
 layout: post
 categories:
  - rails
- - ruby
  - shoulda
- - test
+ - testing
 ---
 I fell into a trap today when creating some tests using Shoulda.
 

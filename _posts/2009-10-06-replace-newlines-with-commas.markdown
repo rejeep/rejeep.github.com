@@ -5,7 +5,6 @@ categories:
  - bash
  - mysql
  - rails
- - replace
  - ruby
  - sql
  - tr

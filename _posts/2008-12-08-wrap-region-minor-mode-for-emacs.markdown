@@ -3,7 +3,6 @@ title: Wrap region minor mode for Emacs
 layout: post
 categories:
  - emacs
- - minor-mode
 ---
 
 I finally took the time to convert my wrap-region function and made a

@@ -1,12 +1,10 @@
 ---
-title: "Keats: Emacs mode for Keybinding Cheats"
+title: Keats: Emacs mode for Keybinding Cheats
 layout: post
 categories:
  - cheat
  - emacs
  - keybindings
- - major-mode
- - minor-mode
  - keats
 ---
 

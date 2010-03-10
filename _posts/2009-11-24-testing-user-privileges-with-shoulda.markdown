@@ -3,8 +3,8 @@ title: Testing User Privileges with Shoulda
 layout: post
 categories:
  - rails
- - test
- - refactor
+ - testing
+ - refactoring
 ---
 
 It is really easy to test controllers with Shoulda. But testing a site

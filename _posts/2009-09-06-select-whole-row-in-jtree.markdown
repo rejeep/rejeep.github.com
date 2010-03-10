@@ -4,9 +4,7 @@ layout: post
 categories:
  - java
  - jtree
- - style
  - swing
- - tree
 ---
 
 How do you make a tree node in a **JTree** stretch over the whole row? A

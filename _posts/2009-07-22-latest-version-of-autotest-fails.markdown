@@ -3,7 +3,7 @@ title: Latest version of Autotest fails
 layout: post
 categories:
  - autotest
- - test
+ - testing
  - rails
 ---
 
