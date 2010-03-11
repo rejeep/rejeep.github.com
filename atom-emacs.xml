@@ -4,8 +4,8 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tuxicity - Emacs</title>
-  <link href="http://tuxicity.se/atom-emacs.xml" rel="self"/>
-  <link href="http://tuxicity.se/"/>
+  <link href="http://blog.tuxicity.se/atom-emacs.xml" rel="self"/>
+  <link href="http://blog.tuxicity.se/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://tuxicity.se/</id>
   <author>
@@ -16,7 +16,7 @@ layout: nil
   {% for post in site.categories.emacs %}
   <entry>
     <title>{{ post.title }}</title>
-    <link href="http://tuxicity.se{{ post.url }}"/>
+    <link href="http://blog.tuxicity.se{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>http://tuxicity.se{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>
