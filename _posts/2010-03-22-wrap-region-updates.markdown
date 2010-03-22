@@ -10,9 +10,8 @@ Actually, the
 I made in this blog was about the first minor mode I ever did,
 [Wrap Region](http://github.com/rejeep/wrap-region/).
 That was more than a year ago. I have learnt a lot since then and when
-I looked through the source code for
-[Wrap Region](http://github.com/rejeep/wrap-region/)
-I found some stuff that needed a refreshment.
+I looked through the source code I found some stuff that needed a
+refreshment.
 
 What I did was a lot of code cleanup and a bug fix for when wrapping
 region with tag. I also added a global mode to activate wrap-region in
