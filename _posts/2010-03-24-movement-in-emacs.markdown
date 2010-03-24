@@ -31,7 +31,7 @@ instead of the arrow keys:
    from where your fingers are when you type. Moving your hand over
    each time you want to move the cursor, is like getting a cop of
    coffee each time you create a new paragraph.
-2. It is much more comfortable to use to movement keys.
+2. It is much more comfortable to use the movement keys.
 3. They fit together much nicer with other Emacs key bindings.
 
 I really hope this post help you drop those inefficient, ugly and
