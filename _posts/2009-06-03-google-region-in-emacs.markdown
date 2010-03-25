@@ -4,6 +4,24 @@ layout: post
 categories:
  - emacs
 ---
+
+## Update START
+I recommend that you use my new version of this function that either
+googles a region (if any selected) or a query.
+
+{% highlight scheme %}
+(defun google ()
+  "Googles a query or region if any."
+  (interactive)
+  (browse-url
+   (concat
+    "http://www.google.com/search?ie=utf-8&oe=utf-8&q="
+    (if mark-active
+        (buffer-substring (region-beginning) (region-end))
+      (read-string "Query: ")))))
+{% endhighlight %}
+## Update END
+
 Two of my most frequently used tools when programming are **Emacs** and
 **Firefox**. And much of the time in Firefox I spend on **Google**. That's why
 I created this (simple) function that googles a region. Just select
