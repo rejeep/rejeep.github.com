@@ -34,3 +34,7 @@ strong {
   margin: 0;
   list-style-type: none;
 }
+
+.screenshot {
+  margin-top: 20px;
+}
