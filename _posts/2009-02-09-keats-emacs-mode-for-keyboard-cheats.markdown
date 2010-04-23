@@ -15,7 +15,7 @@ and **C-x m** helps, but to be able to put in my own description I usually
 keep a cheat file that I manage in **org-mode** that looks something like
 this:
 <pre>| C-c C-v C-c   | Compiles this file |
-| C-c C-v C-r   | Runs shis file     |
+| C-c C-v C-r   | Runs this file     |
 | C-x C-u       | Upcase region      |
 | C-S-backspace | Kill whole line    |
 ...</pre>
