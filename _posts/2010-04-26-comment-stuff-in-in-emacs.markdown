@@ -16,7 +16,7 @@ region is selected) or all lines in the selected region.
   (interactive)
   (save-excursion
     (let (min max)
-      (if (and transient-mark-mode mark-active)
+      (if (region-active-p)
           (setq min (region-beginning) max (region-end))
         (setq min (point) max (point)))
       (comment-or-uncomment-region
