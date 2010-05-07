@@ -1,5 +1,5 @@
 ---
-title: Wrap region updates
+title: wrap-region updates
 layout: post
 categories:
  - emacs

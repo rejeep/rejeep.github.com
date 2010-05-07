@@ -1,5 +1,5 @@
 ---
-title: Duplicate Current Line or Region in Emacs
+title: Duplicate current line or region in Emacs
 layout: post
 categories:
  - emacs

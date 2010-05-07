@@ -1,5 +1,5 @@
 ---
-title: Drag Stuff in Emacs
+title: Drag stuff in Emacs
 layout: post
 categories:
  - emacs

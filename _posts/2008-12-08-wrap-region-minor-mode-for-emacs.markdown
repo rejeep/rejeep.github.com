@@ -1,5 +1,5 @@
 ---
-title: Wrap region minor mode for Emacs
+title: wrap-region minor mode for Emacs
 layout: post
 categories:
  - emacs

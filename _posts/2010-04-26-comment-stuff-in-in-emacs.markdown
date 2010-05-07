@@ -1,5 +1,5 @@
 ---
-title: Comment Stuff in Emacs
+title: Comment stuff in Emacs
 layout: post
 categories:
  - emacs

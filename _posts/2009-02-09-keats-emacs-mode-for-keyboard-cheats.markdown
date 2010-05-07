@@ -1,5 +1,5 @@
 ---
-title: "Keats: Emacs mode for Keybinding Cheats"
+title: "Keats: Emacs mode for key binding cheats"
 layout: post
 categories:
  - cheat

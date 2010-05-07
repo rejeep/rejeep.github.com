@@ -1,5 +1,5 @@
 ---
-title: Rename File and Buffer in Emacs
+title: Rename file and buffer in Emacs
 layout: post
 categories:
  - emacs

@@ -1,5 +1,5 @@
 ---
-title: Swap Windows in Emacs
+title: Swap windows in Emacs
 layout: post
 categories:
  - emacs

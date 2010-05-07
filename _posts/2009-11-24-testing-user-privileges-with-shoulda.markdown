@@ -1,5 +1,5 @@
 ---
-title: Testing User Privileges with Shoulda
+title: Testing user privileges with Shoulda
 layout: post
 categories:
  - rails

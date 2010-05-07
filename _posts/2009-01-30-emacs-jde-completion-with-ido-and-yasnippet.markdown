@@ -1,5 +1,5 @@
 ---
-title: Emacs JDE completion with ido and yasnippet
+title: Emacs JDE completion with Ido and Yasnippet
 layout: post
 categories:
  - emacs
