@@ -20,4 +20,4 @@ a markup tag:
 Many lines of comments are included in the code, so I don't spend any
 time repeating myself here.
 
-Check it out at [Github](http://github.com/rejeep/wrap-region/ "Wrap region at Github")
+Check it out at [Github](http://github.com/rejeep/wrap-region/)
