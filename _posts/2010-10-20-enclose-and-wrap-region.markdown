@@ -30,7 +30,7 @@ Source: <http://github.com/rejeep/wrap-region>
 
 Enclose mode was built from scratch, with inspiration taken from
 TextMate. Enclose keeps a hash with keys that will enclose. Pressing
-any of those keys will insert that key and it's right buddy, and place
+any of those keys will insert that key and its right buddy, and place
 the cursor in between.
 
 When cursor is in focus (not moved since inserting punctuations),
