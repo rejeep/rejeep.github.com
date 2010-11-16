@@ -20,24 +20,25 @@ there are a few improvements to it:
 3. Handles the case if Emacs is visiting a file and that file is removed
 
 {% highlight scheme %}
-(defun rename-file-and-buffer ()
+(defun rename-this-buffer-and-file ()
   "Renames current buffer and file it is visiting."
   (interactive)
   (let ((name (buffer-name))
         (filename (buffer-file-name)))
     (if (not (and filename (file-exists-p filename)))
-        (message "Buffer '%s' is not visiting a file!" name)
+        (error "Buffer '%s' is not visiting a file!" name)
       (let ((new-name (read-file-name "New name: " filename)))
         (cond ((get-buffer new-name)
-               (message "A buffer named '%s' already exists!" new-name))
+               (error "A buffer named '%s' already exists!" new-name))
               (t
                (rename-file filename new-name 1)
                (rename-buffer new-name)
                (set-visited-file-name new-name)
-               (set-buffer-modified-p nil)))))))
+               (set-buffer-modified-p nil)
+               (message "File '%s' successfully renamed to '%s'" name (file-name-nondirectory new-name))))))))
 {% endhighlight %}
 
 I bound **C-c r** to the function:
 {% highlight scheme %}
-(global-set-key (kbd "C-c r") 'rename-file-and-buffer)
+(global-set-key (kbd "C-c r") 'rename-this-buffer-and-file)
 {% endhighlight %}
