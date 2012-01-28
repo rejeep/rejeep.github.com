@@ -27,7 +27,7 @@ a:hover {
 strong {
   background: #ff8;
   border: 1px dotted #888;
-  padding: 3px 0;
+  padding: 3px 3px;
   font-weight: 100;
 }
 
