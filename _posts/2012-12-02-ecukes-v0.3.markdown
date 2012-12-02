@@ -1,0 +1,34 @@
+---
+title: Ecukes v0.3
+layout: post
+categories:
+ - emacs
+ - ecukes
+ - testing
+---
+
+[Ecukes](http://ecukes.info) **v0.3** has been released. This is the list of changes:
+
+* Lots of bug fixes, refactoring and added tests.
+* New driver (no win) added and is default if no driver specified. Run in batch mode with **--script** and with full window with **--win**.
+* Added **-h/--help** option.
+* Added **--dbg** option that enables some debug options in Emacs.
+* Messages are by default not printed to **STDOUT**. Use **--verbose** option to show.
+* Alternate way of calling steps **(Given "this %s" "stuff")** <=> **(Given "this stuff")**
+* Can run tagged scenarios with **--tags @foo,@bar**
+* And a lot more... See [list of closed issues](https://github.com/rejeep/ecukes/issues?milestone=1&state=closed) and [diff](https://github.com/rejeep/ecukes/compare/0.2.1...v0.3.0) for more info.
+
+This is the usage output:
+
+    USAGE: ecukes [--script|--win] [file|dir] [options]
+
+    OPTIONS:
+     -h, --help             Display this help message
+     --script               Run Ecukes as a script/batch job
+     --win                  Run Ecukes with full GUI window
+     --new                  Create new Ecukes setup for project
+     --verbose              Show `message' output
+     --dbg                  Run in debug mode (enable as much debug options in Emacs as possible)
+     --tags TAG_EXPRESSION  Only execute the scenarios with tags matching TAG_EXPRESSION.
+                            TAG_EXPRESSION Examples: --tags @dev, --tags @dev,@local
+
