@@ -14,21 +14,30 @@ with files and directories in Emacs.
 ## Example
 
 {% highlight scheme %}
-(let* ((foo-path
-        (f-join "~" "tmp" "foo"))
+(let* ((dir
+        (f-join "~" "tmp" "dir"))
        (foo-file
-        (f-expand "file.txt" foo-path)))
-  (unless (f-directory? foo-path)
-    (f-mkdir foo-path))
+        (f-expand "foo.txt" dir))
+       (bar-file
+        (f-expand "bar.txt" dir)))
+  (unless (f-directory? dir)
+    (f-mkdir dir))
   (f-write foo-file "SOME ")
   (f-write foo-file "CONTENT" 'append)
-  (message
-   "File '%s' have content '%s' and size '%d'"
-   foo-file
-   (f-read foo-file)
-   (f-size foo-path)))
+  (f-write bar-file "MORE...")
+  (-map
+   (lambda (file)
+     (message
+      "File: %s, content: '%s', size: %d"
+      (f-relative file dir)
+      (f-read file)
+      (f-size file)))
+   (f-files dir))
+  (message "Total size of all files in %s: %d" dir (f-size dir)))
 {% endhighlight %}
 
 The output will be:
 
-    File '~/foo/file.txt' have content 'SOME CONTENT' and size '12'
+    File: bar.txt, content: 'MORE...', size: 7
+    File: foo.txt, content: 'SOME CONTENT', size: 12
+    Total size of all files in ~/tmp/dir: 19
