@@ -24,13 +24,14 @@ detailed installation description is given in the README and lisp
 source file.
     
 ## Usage
-First off, start the mode with **M-x drag-stuff-mode**. Note that all
+First off, start the mode with `M-x drag-stuff-mode`. Note that all
 command takes a prefix argument to repeat the command that many times.
 
 ### Drag line
-To drag a line, put the cursor on that line and press **<M-up>** or **<M-down>**.
+To drag a line, put the cursor on that line and press `<M-up>` or `<M-down>`.
 
-For example, put the cursor on line 3 and press **<M-up>**.
+For example, put the cursor on line 3 and press `<M-up>`.
+
 {% highlight ruby linenos %}
 class Foo
 end
@@ -38,6 +39,7 @@ attr_accessor :bar
 {% endhighlight %}
 
 You should now have
+
 {% highlight ruby linenos %}
 class Foo
 attr_accessor :bar
@@ -49,7 +51,8 @@ Drag lines work like drag line except for that you can move more than
 one line. Note that you don't have to select the complete lines. It's
 enough that some part of the first and last lines are selected.
 
-Mark the to_s method and press **<M-down>**.
+Mark the to_s method and press `<M-down>`.
+
 {% highlight ruby linenos %}
 def to_s
   ":#{bar}:"
@@ -59,6 +62,7 @@ end
 {% endhighlight %}
 
 You should now have
+
 {% highlight ruby linenos %}
 class Foo
 def to_s
@@ -69,11 +73,12 @@ end
 
 ### Drag region
 You can drag a region left and right by selecting a region and press
-**<M-left>** or **<M-right>**.
+`<M-left>` or `<M-right>`.
 
-For example. Select **{bar}** and press **<M-right>** until it's at
+For example. Select `{bar}` and press `<M-right>` until it's at
 the correct place. You could also do this with by giving a prefix
-argument like **M-3 M-right**.
+argument like `M-3 M-right`.
+
 {% highlight ruby linenos %}
 class Foo
   def to_s
@@ -83,6 +88,7 @@ end
 {% endhighlight %}
 
 You should now have
+
 {% highlight ruby linenos %}
 class Foo
   def to_s
@@ -93,9 +99,10 @@ end
 
 ### Drag word
 To drag a word, just place the cursor on the word and press
-**<M-left>** or **<M-right>**.
+`<M-left>` or `<M-right>`.
 
-Put the cursor on **me** and press **<M-right>** a few times.
+Put the cursor on `me` and press `<M-right>` a few times.
+
 {% highlight ruby linenos %}
 class Foo
   def to_s
@@ -105,6 +112,7 @@ end
 {% endhighlight %}
 
 You should now have
+
 {% highlight ruby linenos %}
 class Foo
   def to_s

@@ -8,6 +8,7 @@ categories:
 
 In a project I'm working on we have chemicals that belongs to a
 department and a department has many chemicals:
+
 {% highlight ruby %}
 # app/models/chemical.rb
 class Chemical < ActiveRecord::Base
@@ -21,6 +22,7 @@ end
 {% endhighlight %}
 
 In our project we use named scope extensively. This is an example:
+
 {% highlight ruby %}
 # app/models/chemical.rb
 class Chemical < ActiveRecord::Base
@@ -39,6 +41,7 @@ Chemical.belongs_to_departments(department)
 
 But, chemicals was far from the only model belonging to a
 department. People for example, were this scope also came in handy.
+
 {% highlight ruby %}
 # app/models/person.rb
 class Person < ActiveRecord::Base
@@ -62,6 +65,7 @@ to have them nicely structured.
 So in **lib**, I have a folder named **named_scope**. And in that folder, all
 modules with common named scopes are. To get extra nice structure I
 create a module called **NamedScope**:
+
 {% highlight ruby %}
 # lib/named_scopes/named_scope.rb
 module NamedScope
@@ -70,6 +74,7 @@ end
 
 Now I create the module that will hold the common department
 scope. And that can be done using **self.included**:
+
 {% highlight ruby %}
 # lib/named_scopes/department.rb
 module NamedScope::Departments
@@ -82,6 +87,7 @@ end
 {% endhighlight %}
 
 So now in my models I can include that module:
+
 {% highlight ruby %}
 # app/models/chemical.rb
 class Chemical < ActiveRecord::Base
@@ -100,6 +106,7 @@ end
 
 Now I can, with a DRY code and a nice structure, do this on both
 models:
+
 {% highlight ruby %}
 Chemical.belongs_to_department(department)
 Person.belongs_to_department(department)
