@@ -3,6 +3,14 @@ body {
   font-size: 16px;
 }
 
+p code {
+  font-family: Inconsolata, Consolas, monospace;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px #d2d2d2 solid;
+  background: #fafafa;
+}
+
 pre {
   font-family: Inconsolata, Consolas, monospace;
   padding: 10px;
