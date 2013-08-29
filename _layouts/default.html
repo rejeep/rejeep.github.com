@@ -7,12 +7,7 @@
     <title>{{ page.title }}</title>
 
     <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/stylesheets/blueprint/reset.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="/stylesheets/blueprint/typography.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="/stylesheets/blueprint/grid.css" type="text/css" media="screen, projection" />
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="/stylesheets/blueprint/ie.css" type="text/css" media="screen, projection" />
-    <![endif]-->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="/stylesheets/application.css" type="text/css" media="screen" />
 
     <link href="http://feeds.feedburner.com/tuxicity" rel="alternate" title="Tuxicity" type="application/atom+xml" />
@@ -33,13 +28,13 @@
 
   <body>
     <div class="container">
-      <div class="span-24 last" id="header">
-        <a href="/">
-          <img src="/images/logo.png" />
-        </a>
+      <div class="row">
+        <div class="span12" id="header">
+          <a href="/"><img src="/images/logo.png" /></a>
+        </div>
       </div>
 
-      <div class="span-24 last">
+      <div class="row">
         {{ content }}
       </div>
     </div>
