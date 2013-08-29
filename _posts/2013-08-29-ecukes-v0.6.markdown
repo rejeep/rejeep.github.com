@@ -1,0 +1,45 @@
+---
+title: Ecukes v0.6
+layout: post
+categories:
+ - emacs
+ - ecukes
+---
+
+100 commits later and Ecukes `v0.6` is ready, full with new awesome
+features. Here's a list of features and changes. If you are using
+Ecukes you should read this because there are a few breaking changes.
+
+## New features
+
+1. Ecukes depends on Espuds by default, so you no longer have to add both `ecukes` and `espuds` as dependencies in your Cask-file
+2. Support for reporters. These are currently supported:
+  * dot (default)
+  * magnars
+  * spec
+  * gangsta
+  * landing
+  * progress
+3. To list all reporters, run the command `list-reporters` and to select a reporter, use `-r <reporter>` or `--reporter <reporter>`
+4. Added `--timeout <seconds>` (`-t <seconds>`) option for async step definitions to specify custom timeout. If exceeded, an error occurs.
+5. It's possible to run scenarios that matches pattern with `--patterns <*>` (`-p  <*>`)
+6. It's possible to run scenarios that does not matches pattern with `--anti-patterns  <*>` (`-a  <*>`)
+7. If you run and some scenarios fail, you can run only them with `--only-failing` (`-f`)
+8. Add support to log error backtrace to file on error with `--error-log <file>` (`-l <file>`)
+9. Support for default options via a `.ecukes` file (one option per row)
+
+## Breaking changes
+
+1. The `ECUKES_EMACS` variable is replaced in favor of `EMACS`
+2. The `--dbg` option have changed name to `--debug`
+3. The `--list-steps` is no longer an option but a commaned called `list-steps`
+4. The `--new` is no longer an option but a commaned called `new`
+5. Mode options have changed (and does no longer need to be first option):
+  * `--script` (default)
+  * `--win`
+  * `--no-win` (was previously default)
+6. All files are read as `utf-8`
+7. Features files are fetched recursive if a directory specified
+8. The deprecated `ecukes` binary in the Ecukes root has been removed, use `bin/ecukes` instead (Cask will do this automatically if you run `cask exec ecukes`)
+
+It's also worth running `cask exec ecukes -h` and reading through the [new README](https://github.com/rejeep/ecukes.el/blob/master/README.markdown).
