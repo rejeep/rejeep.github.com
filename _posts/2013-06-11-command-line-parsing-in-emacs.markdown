@@ -30,10 +30,10 @@ Here is a (silly) example where numbers can be added and subtracted.
   (setq calc-fn '-))
 
 (commander
- (option "--help, -h" "Show usage information" 'commander-print-usage)
- (option "--add" "Add values" 'add)
- (option "--sub" "Subtract values" 'sub)
- (command "calc [*]" "Calculate these values" 'calc))
+ (option "--help, -h" "Show usage information" commander-print-usage)
+ (option "--add" "Add values" add)
+ (option "--sub" "Subtract values" sub)
+ (command "calc [*]" "Calculate these values" calc))
 {% endhighlight %}
 
 ## Example usage
