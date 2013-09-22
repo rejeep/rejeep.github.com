@@ -3,39 +3,146 @@ layout: default
 title: Tuxicity - Blog
 ---
 
-<div class="span6">
-  <h1>
-    Posts
-    <a href="http://feeds.feedburner.com/tuxicity" class="btn btn-small">Feed</a>
-  </h1>
-  <ul class="no-bullets">
-    {% for post in site.posts %}
-    <li>
-      <span>[{{ post.date | date_to_string }}]</span>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+<div class="row">
+  <div class="col-md-6">
+    <h1>
+      <span class="glyphicon glyphicon-list"></span>
+      Posts
+      <a href="http://feeds.feedburner.com/tuxicity" class="btn btn-primary">Feed</a>
+    </h1>
+    <table class="table table-striped">
+      {% for post in site.posts %}
+      <tr>
+        <td>
+          [{{ post.date | date_to_string }}]
+        </td>
+        <td>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
 
-<div class="span6">
-  <div id="my-stuff">
-    <h1>My Stuff</h1>
-    <ul>
-      <li><a href="https://github.com/rejeep/ecukes.el">ecukes</a></li>
-      <li><a href="https://github.com/rejeep/ert-runner.el">ert-runner</a></li>
-      <li><a href="https://github.com/rejeep/f.el">f</a></li>
-      <li><a href="https://github.com/rejeep/ansi.el">ansi</a></li>
-      <li><a href="https://github.com/rejeep/commander.el">commander</a></li>
-      <li><a href="https://github.com/rejeep/cask.el">cask</a></li>
-      <li><a href="https://github.com/rejeep/espuds.el">espuds</a></li>
-      <li><a href="https://github.com/rejeep/html-script-src.el">html-script-src</a></li>
-      <li><a href="https://github.com/rejeep/enclose">enclose</a></li>
-      <li><a href="https://github.com/rejeep/ruby-end">ruby-end</a></li>
-      <li><a href="https://github.com/rejeep/wrap-region">wrap-region</a></li>
-      <li><a href="https://github.com/rejeep/drag-stuff">drag-stuff</a></li>
-      <li><a href="https://github.com/rejeep/evm">evm</a></li>
-      <li><a href="https://github.com/rejeep/ruby-tools">ruby-tools</a></li>
-    </ul>
+  <div class="col-md-6">
+    <h1>
+      <span class="glyphicon glyphicon-star"></span>
+      My code
+      <a href="https://github.com/rejeep" class="btn btn-primary">Github</a>
+    </h1>
+    <table class="table table-striped">
+      <tr>
+        <td>
+          <a href="https://github.com/ecukes/ecukes">ecukes</a>
+        </td>
+        <td>
+          Cucumber for Emacs
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/ert-runner.el">ert-runner</a>
+        </td>
+        <td>
+          Opinionated Ert testing workflow
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/f.el">f</a>
+        </td>
+        <td>
+          Modern API for working with files and directories
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/ansi.el">ansi</a>
+        </td>
+        <td>
+          Turn string into ansi strings
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/commander.el">commander</a>
+        </td>
+        <td>
+          Emacs command line parser
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/cask/cask">cask</a>
+        </td>
+        <td>
+          Emacs dependency management made easy
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/ecukes/espuds">espuds</a>
+        </td>
+        <td>
+          Ecukes step definitions
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/html-script-src.el">html-script-src</a>
+        </td>
+        <td>
+          Insert script tags for popular JavaScript libraries
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/enclose">enclose</a>
+        </td>
+        <td>
+          Enclose cursor within punctuation pairs
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/ruby-end">ruby-end</a>
+        </td>
+        <td>
+          Automatic insertion of end blocks for Ruby
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/wrap-region">wrap-region</a>
+        </td>
+        <td>
+          Wrap text with punctation or tag
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/drag-stuff">drag-stuff</a>
+        </td>
+        <td>
+          Drag stuff (lines, words, region, etc...) around
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/evm">evm</a>
+        </td>
+        <td>
+          Emacs version manager
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/rejeep/ruby-tools">ruby-tools</a>
+        </td>
+        <td>
+          Collection of handy functions for ruby-mode
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
