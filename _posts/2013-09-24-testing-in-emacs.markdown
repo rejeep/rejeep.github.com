@@ -3,6 +3,7 @@ title: Testing in Emacs
 layout: post
 categories:
  - emacs
+ - testing
  - cask
  - ecukes
  - ert-runner
