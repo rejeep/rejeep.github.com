@@ -1,0 +1,46 @@
+---
+title: Cask v0.5
+layout: post
+categories:
+ - emacs
+ - cask
+---
+
+Cask `v0.5` is released! The release mostly includes small changes
+such as bug fixes, clean up and code refactoring. But there are a few
+features worth mentioning.
+
+## Upgrade command
+
+Previously, updating Cask has been somewhat of pain. Now it's as
+simple as running `cask upgrade`. This will upgrade Cask, but also all
+of Cask's dependencies.
+
+## Outdated command
+
+Now you can find out what packages are outdated by running the command
+`cask outdated`. This command will print a list of all dependencies
+with a newer version available. It will print the package name,
+current version and new available version.
+
+## EPL
+
+To handle the many quirks and inconsistencies in `package.el`, we
+wrote a package called [epl.el](https://github.com/cask/epl), which is
+a layer on top of `package.el`. It has a nice interface and works from
+Emacs 23 to trunk.
+
+## Google group
+
+Development related discussion has been moved to the Google group
+<https://groups.google.com/forum/#!forum/cask-dev>. Please come over
+and say hi!
+
+## Cask v0.6
+
+Cask is being actively developed and the future promises a lot of
+features that will make Emacs package development a breeze. If you are
+interested in what's comming, check out
+<http://tuxicity.se/emacs/cask/ecukes/2013/09/01/emacs-package-development.html>. Also,
+follow the development of the next big release at Github
+<https://github.com/cask/cask/issues?milestone=3&state=open>.
