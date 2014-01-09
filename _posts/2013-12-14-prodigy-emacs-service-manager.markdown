@@ -34,4 +34,4 @@ Services are created using `prodigy-define-service`:
 {% endhighlight %}
 
 Start Prodigy using `M-x prodigy`. See more information at
-<https://github.com/rejeep/prodigy.el>.
+https://github.com/rejeep/prodigy.el.

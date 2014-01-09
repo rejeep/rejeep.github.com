@@ -21,15 +21,14 @@ should_validate_uniqueness_of :email
 {% endhighlight %}
 
 But weird enough I got this failure:
-<pre>
-1) Failure:
-test: User should require case sensitive unique value for email. (UserTest)
-[/usr/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.10.1/lib/shoulda/assertions.rb:50:in `assert_accepts'
-/usr/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.10.1/lib/shoulda/active_record/macros.rb:88:in `__bind_1243608769_500830'
-/usr/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.10.1/lib/shoulda/context.rb:253:in `call'
-/usr/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.10.1/lib/shoulda/context.rb:253:in `test: User should require case sensitive unique value for email. ']:
-Can't find first User
-</pre>
+
+    1) Failure:
+    test: User should require case sensitive unique value for email. (UserTest)
+    [/usr/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.10.1/lib/shoulda/assertions.rb:50:in `assert_accepts'
+    /usr/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.10.1/lib/shoulda/active_record/macros.rb:88:in `__bind_1243608769_500830'
+    /usr/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.10.1/lib/shoulda/context.rb:253:in `call'
+    /usr/lib/ruby/gems/1.8/gems/thoughtbot-shoulda-2.10.1/lib/shoulda/context.rb:253:in `test: User should require case sensitive unique value for email. ']:
+    Can't find first User
 
 I even got it when I changed the **:case_sensitive** option.
 

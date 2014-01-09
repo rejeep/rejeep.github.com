@@ -33,7 +33,7 @@ Emacs 23 to trunk.
 ## Google group
 
 Development related discussion has been moved to the Google group
-<https://groups.google.com/forum/#!forum/cask-dev>. Please come over
+https://groups.google.com/forum/#!forum/cask-dev. Please come over
 and say hi!
 
 ## Cask v0.6
@@ -41,6 +41,6 @@ and say hi!
 Cask is being actively developed and the future promises a lot of
 features that will make Emacs package development a breeze. If you are
 interested in what's comming, check out
-<http://tuxicity.se/emacs/cask/ecukes/2013/09/01/emacs-package-development.html>. Also,
+http://tuxicity.se/emacs/cask/ecukes/2013/09/01/emacs-package-development.html. Also,
 follow the development of the next big release at Github
-<https://github.com/cask/cask/issues?milestone=3&state=open>.
+https://github.com/cask/cask/issues?milestone=3&state=open.

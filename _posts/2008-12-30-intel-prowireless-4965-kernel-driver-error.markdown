@@ -13,8 +13,9 @@ In recent kernel versions there seems to be some problem with the
 **Intel PRO/Wireless 4965** driver.
 
 **dmesg** shows this message:
-<pre>iwlagn: iwlwifi-4965-2.ucode firmware file req failed: Reason -2
-firmware: requesting iwlwifi-4965-2.ucode</pre>
+
+    iwlagn: iwlwifi-4965-2.ucode firmware file req failed: Reason -2
+    firmware: requesting iwlwifi-4965-2.ucode
 
 Looking in **/lib/firmware** there is a file named
 **iwlwifi-4965-2.ucode**. So there's obviously something wrong with this

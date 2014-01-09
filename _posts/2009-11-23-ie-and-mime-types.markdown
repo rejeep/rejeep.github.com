@@ -20,11 +20,10 @@ But of course something had to not work in Internet Explorer. Not
 obvious how a browser can affect something to fail on the server
 side. It turns out that IE translates the MIME-types a bit different
 than what other browsers do.
-<pre>
-FORMAT          MIME-IE          MIME-OTHER
-png             image/x-png      image/png
-jpeg            image/pjpeg      image/jpeg
-</pre>
+
+    FORMAT          MIME-IE          MIME-OTHER
+    png             image/x-png      image/png
+    jpeg            image/pjpeg      image/jpeg
 
 So the "correct" Paperclip validation for gif, jpg and png images would then be:
 

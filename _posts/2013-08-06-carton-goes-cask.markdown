@@ -8,7 +8,7 @@ categories:
 ---
 
 Because of a name clash with another project called Carton (see
-<https://github.com/rejeep/cask.el/issues/20>), the project have
+https://github.com/rejeep/cask.el/issues/20), the project have
 changed name to Cask.
 
 With this new release, there are a lot of new awesome features (> 150
@@ -38,7 +38,7 @@ use the alias:
 
     (source melpa)
 
-The README contains a list of all pre defined sources: <https://github.com/rejeep/cask.el/#source>
+The README contains a list of all pre defined sources: https://github.com/rejeep/cask.el/#source
 
 ## Project bin added to PATH
 
@@ -105,4 +105,4 @@ To avoid the pain of BASH and make it easier to add support for more
 platforms, the `cask` binary have been implemented in Emacs Lisp.
 
 Next up is release `v0.5`. Check out what's included:
-<https://github.com/rejeep/cask.el/issues?milestone=2&state=open>
+https://github.com/rejeep/cask.el/issues?milestone=2&state=open
