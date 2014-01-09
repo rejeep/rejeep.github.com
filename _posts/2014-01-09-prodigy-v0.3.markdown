@@ -1,0 +1,205 @@
+---
+title: Prodigy v0.3
+layout: post
+categories:
+ - emacs
+ - prodigy
+---
+
+[Prodigy](https://github.com/rejeep/prodigy.el) version `0.3` has just
+been released with a lot of new awesome features. Here is a list of
+the most important changes.
+
+## Tag inheritance
+
+If a service is tagged, the tags will show up in the Prodigy
+buffer. Prodigy now comes with a new function called
+`prodigy-define-tag`:
+
+{% highlight scheme %}
+(prodigy-define-tag
+  :name 'foo
+  ...
+ )
+{% endhighlight %}
+
+The function accepts almost the same parameters as
+`prodigy-define-service`. See doc-string for `prodigy-define-tag` for
+more information.
+
+Tags does not have to be defined, but if they are, services that has
+that tag, will inherit all of its properties. The inheritance is
+recursive, so if the tag in turn has any tags, the service will
+inherit all those tag properties.
+
+So what can you actually use this for? To illustate the use of this,
+here are a few tags from my Prodigy configuration.
+
+{% highlight scheme %}
+(prodigy-define-tag
+  :name 'thin
+  :on-output (lambda (service output)
+               (when (s-matches? "Listening on 0\\.0\\.0\\.0:[0-9]+, CTRL\\+C to stop" output)
+                 (prodigy-set-status service 'ready))))
+
+(prodigy-define-tag
+  :name 'webrick
+  :on-output (lambda (service output)
+               (when (s-matches? "WEBrick::HTTPServer#start: pid=[0-9]+ port=[0-9]+" output)
+                 (prodigy-set-status service 'ready))))
+
+(prodigy-define-tag
+  :name 'mongrel
+  :on-output (lambda (service output)
+               (when (s-matches? "Ctrl-C to shutdown server" output)
+                 (prodigy-set-status service 'ready))))
+
+(prodigy-define-tag
+  :name 'rails
+  :tags '(thin mongrel webrick))
+{% endhighlight %}
+
+If a service is tagged with `rails`, it will also inherit the
+properties from `thin`, `webrick` and `mongrel`. So no matter which
+one of these servers your Rails application is using, the status will
+be properly updated (see below for more information about
+status). This also allow other services and tags to inherit those
+servers.
+
+## On output hook
+
+As you might noticed in the above example, there is a new property
+called `on-output`. The function is called each time the service
+process gets any new output. The function is called with the service
+and the output.
+
+## Improved status handling
+
+In the tag inheritance example above, the function
+`prodigy-set-status` was used. What it does is it sets the service
+status. The function takes two arguments, the service and the status
+id. A status has to be defined. Prodigy includes a few statuses by
+default (see doc-string for `prodigy-status-list`), but you can add
+your own with `prodigy-define-status`.
+
+## Use hl-line
+
+Previously, Prodigy implemented its own highlight line
+functionallity. Now Prodigy is using `hl-line` for this.
+
+## Updated colors
+
+The status colors are a bit nicer. You can customize these
+yourself. See `prodigy-green-face`, `prodigy-red-face` and
+`prodigy-yellow-face`.
+
+## Url property can be list
+
+The `url` property can now be a list. If it is a list, Prodigy will
+ask you what url you want to open.
+
+{% highlight scheme %}
+(prodigy-define-service
+  :name "Foo"
+  :url '("http://localhost:3000"
+         "http://localhost:3000/foo"))
+{% endhighlight %}
+
+## Async restarts
+
+Some processes takes a while to stop. Previously, the restart command
+did not work very well for such processes. Now, Prodigy stops the
+process, waits for it to be stopped and then starts it.
+
+If the process is not successfully stopped, the status will be set to
+`failed` and the service will not start.
+
+## Force kill process
+
+Some processes just wont die. Now, if you give a prefix argument to
+`prodigy-stop`, it will stop with a `SIGKILL` signal.
+
+## Service path property
+
+The `path` property can now be a string, list or lambda.
+
+{% highlight scheme %}
+(prodigy-define-service
+  :name "Foo"
+  :path "/path/to/foo")
+
+(prodigy-define-service
+  :name "Foo"
+  :path '("/path/to/foo" "/path/to/bar"))
+
+(prodigy-define-service
+  :name "Foo"
+  :path (lambda ()
+          '("/path/to/foo" "/path/to/bar")))
+{% endhighlight %}
+
+A nice use case for this, taken from my own Prodigy setup is this:
+
+{% highlight scheme %}
+(prodigy-define-tag
+  :name 'node
+  :path (lambda ()
+          (f-join default-directory "node_modules" ".bin")))
+{% endhighlight %}
+
+Node services will often run the command `coffee` or `nodemon` to
+start a service. With this tag, the path to
+`/path/to/project/node_modules/.bin` is added to the `exec-path` so
+that the project always run with the correct version and not the
+global one.
+
+## Service command property
+
+The `command` property can now be either a string or a lambda:
+
+{% highlight scheme %}
+(prodigy-define-service
+  :name "Foo"
+  :command "exec")
+
+(prodigy-define-service
+  :name "Foo"
+  :command (lambda () "exec"))
+{% endhighlight %}
+
+## Service args property
+
+The `args` property can now be either a list or a lambda:
+
+{% highlight scheme %}
+(prodigy-define-service
+  :name "Foo"
+  :args '("exec" "foo"))
+
+(prodigy-define-service
+  :name "Foo"
+  :args (lambda () '("exec" "foo")))
+{% endhighlight %}
+
+## Hidden tags
+
+Some services you just want to tag, but you don't want to show the tag
+in the Prodigy buffer. Here is one such from my config:
+
+{% highlight scheme %}
+(prodigy-define-tag
+  :name 'python-simple-http-server
+  :hide t
+  :on-output (lambda (service output)
+               (when (s-matches? "Serving HTTP on 0\\.0\\.0\\.0 port [0-9]+" output)
+                 (prodigy-set-status service 'ready))))
+{% endhighlight %}
+
+As you might notice, the tag has set the `hide` property to true. That
+means that everything will work just as normal, except that the tag
+will not show up in the Prodigy buffer.
+
+## That's it!
+
+That should cover most of the new features. But more are comming!
+Thanks for now!
