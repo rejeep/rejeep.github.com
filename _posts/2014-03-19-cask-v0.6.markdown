@@ -1,0 +1,124 @@
+---
+title: Cask v0.6
+layout: post
+categories:
+- emacs
+- cask
+---
+
+It's time for a new [Cask](http://cask.github.io/) release. I began
+working on Cask v0.6 around christmas and now, over 200 commits later,
+it's finally ready.
+
+To upgrade, run:
+
+{% highlight bash %}
+$ cask upgrade
+{% endhighlight %}
+
+This release includes a lot of new features, which I will describe below.
+
+## Public API
+
+We want to allow other packages to build upon Cask, such as
+[Pallet](https://github.com/rdallasgray/pallet). Now Cask has a nice
+API for that purpose.
+
+See <http://cask.github.io/api.html> for more information.
+
+## Files directive
+
+There is a new directive, called `files`. It specifies what files
+should be included when building the packages. For example:
+
+{% highlight scheme %}
+(files "foo.el" "foo-core.el")
+{% endhighlight %}
+
+If the `files` directive is not used, it will use the default patterns
+from the `package-build.el` package.
+
+This directive is used for two new commands `build` and `package`, see
+more information below.
+
+## Help for specific command
+
+Cask has always had a `cask help` command to list information about
+each command and option. Now you can do it for a specific command, for
+example: `cask help exec`
+
+## New commands
+
+Here are the new commands:
+
+* `files` - Lists all files (see <http://cask.github.io/usage.html#files>)
+* `build` - Compile all Emacs Lisp files specified in the `files` pattern (see <http://cask.github.io/usage.html#build>)
+* `exec-path` - New alist for the `path` command (see <http://cask.github.io/usage.html#exec-path>)
+* `clean-elc` - Remove all byte compiled files (see <http://cask.github.io/usage.html#clean-elc>)
+* `link` - Create link to local package (see <http://cask.github.io/usage.html#link> and below)
+* `package` - Create an ELPA package of this project (see <http://cask.github.io/usage.html#package>)
+* `upgrade-cask` - To avoid confusion between the `update` and `upgrade` command, this command was added. It's simply an alias to the `upgrade` command.
+
+## Improved and updated documentation
+
+Cask has a new and improved website. See <http://cask.github.io>.
+
+## Fetcher dependencies
+
+This feature allow you to install dependencies from VCS sources. I use
+this for my yasnippets collection. I want to use a separate repository
+and I don't want to release an ELPA package for it. I've used a
+submodule for this previously, but now I simply do:
+
+{% highlight scheme %}
+(depends-on "yasnippets" :git "https://github.com/rejeep/yasnippets.git" :files ("*" (:exclude ".git")))
+{% endhighlight %}
+
+See <http://cask.github.io/dsl.html#depends-on> for more information.
+
+## Linking
+
+Linking is a new functionality that allow you to link a Cask
+dependency to a local directory.
+
+This is useful when you want to test changes to a package. Let's say I
+make changes to my `f.el` package, then I can link that package in
+another package that use `f.el` to make sure it really works. For
+example:
+
+{% highlight bash %}
+$ cask link f ~/Code/f.el
+{% endhighlight %}
+
+Run `cask help link` for more information about linking.
+
+## More quiet than before
+
+Emacs is not optimal for CLI programs. It prints a lot of messages
+when you don't want it. Cask now uses the
+[shut-up](https://github.com/rejeep/shut-up.el) package to be a bit
+more quiet. Unfortunately, it's not possible to hide all output. We
+have reported this as an issue to the Emacs developers and hopefully
+they will do something about it.
+
+If you want full output, use the `--verbose` option.
+
+## Path and load path pollution
+
+Previously, the `path` and `load-path` commands included every
+directory in the `.cask/EMACS-VERSION/elpa` directory. Now it only
+includes package directories.
+
+## Loading only packages
+
+Previously, if you removed a package from the `Cask`-file it would
+still be loaded when you started Emacs. Now, only the packages
+specified in the `Cask`-file are loaded.
+
+## Breaking changes
+
+This release adds a lot of functionality, but does not break a lot of
+old functionality. The only thing breaking, is that the old command
+called `package` is now called `pkg-file`.
+
+That's it folks, enjoy!
