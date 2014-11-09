@@ -1,1 +1,1 @@
-rvm --create ruby-1.9.3-p484@rejeep.github.com
+rvm --create ruby-2.1.1@rejeep.github.com
