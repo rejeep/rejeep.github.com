@@ -6,7 +6,7 @@ categories:
 ---
 
 Actually, the
-[first post](http://blog.tuxicity.se/emacs/2008/12/08/wrap-region-minor-mode-for-emacs.html)
+[first post](http://rejeep.github.com/emacs/2008/12/08/wrap-region-minor-mode-for-emacs.html)
 I made in this blog was about the first minor mode I ever did,
 [Wrap Region](http://github.com/rejeep/wrap-region/).
 That was more than a year ago. I have learnt a lot since then and when

@@ -7,7 +7,7 @@ categories:
 ---
 
 I got a comment in my
-[last post](http://blog.tuxicity.se/elisp/emacs/2010/03/11/duplicate-current-line-or-region-in-emacs.html)
+[last post](http://rejeep.github.com/elisp/emacs/2010/03/11/duplicate-current-line-or-region-in-emacs.html)
 regarding dragging a line up and down. I remembered that I once
 started working on a minor mode "drag stuff". Whatever happened to
 that I don't know.

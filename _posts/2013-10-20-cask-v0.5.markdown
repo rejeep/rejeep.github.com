@@ -41,6 +41,6 @@ and say hi!
 Cask is being actively developed and the future promises a lot of
 features that will make Emacs package development a breeze. If you are
 interested in what's comming, check out
-http://tuxicity.se/emacs/cask/ecukes/2013/09/01/emacs-package-development.html. Also,
+http://rejeep.github.com/emacs/cask/ecukes/2013/09/01/emacs-package-development.html. Also,
 follow the development of the next big release at Github
 https://github.com/cask/cask/issues?milestone=3&state=open.

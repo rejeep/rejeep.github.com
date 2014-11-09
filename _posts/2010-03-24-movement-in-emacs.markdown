@@ -40,4 +40,4 @@ stupid arrow keys!
 **Ps.**
 Using the movement keys involve a lot of **Ctrl-key** usage, which
 kills you little finger.
-[Read about how you can save it](http://blog.tuxicity.se/emacs/2009/06/03/save-your-emacs-finger-before-its-too-late.html)
+[Read about how you can save it](http://rejeep.github.com/emacs/2009/06/03/save-your-emacs-finger-before-its-too-late.html)
