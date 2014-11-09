@@ -1,10 +1,16 @@
+body {
+  background: #fff;
+}
+
+p {
+  font-size: 16px;
+}
+
 pre {
-  font-family: Inconsolata, Consolas, monospace;
-  padding: 10px;
-  overflow-x: auto;
-  border-radius: 5px;
-  border: 1px #d2d2d2 solid;
-  background: #fafafa;
+  background: #f7f8f9;
+  border: none;
+  border-left: 6px solid #558abb;
+  border-radius: 0px;
 }
 
 #header {
